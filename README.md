@@ -42,17 +42,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-## TODO list/proposals (not sorted)
-
-1. tsconfig: `"baseUrl": "src"` can leads to name collisions `import foo from "isItFileOrPackagName"`;
-2. I personally do not like re-exporting external components (like bootstrap), nothing special against it, I just had bad experience.
-3. Payload of redux actions must be serializable (plain array  and object, not classes).
- Serializable actions makes code easier to debug. In the best case we will even be able to mirror client's
- state to our logger/supports system
-4. `export default ConnectedComponent` allows to use React.lazy which is good way to reduce bundle size
-5. `export const Component` allows to test not connected component as well as using Storybook
-6. Dependencies of react hooks is not set. Dependencies can not be set yet: functions used in hooks are not stable (not memoized).
-7.  Pollution to prototypes of basic types is an anti-pattern. It can lead to unexpected behavior with third-party libraries.
-
