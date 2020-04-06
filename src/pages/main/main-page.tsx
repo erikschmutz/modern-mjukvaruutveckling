@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Row, Col, Card, Steps, Input, Button, Carousel, Result, Anchor, Select, Avatar } from 'antd';
+import { Row, Col, Card, Steps, Input, Button, Carousel } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { APIClient } from 'src/lib/API/server';
 import './main-page.scss';
@@ -23,7 +23,7 @@ export const AddTemplatePage = (props: IProp) => {
   const [isCreating, setIsCreating]: [boolean, (input: boolean) => void] = useState<boolean>(false);
   const [isUpdating, setIsUpdating]: [boolean, (input: boolean) => void] = useState<boolean>(false);
   const [stageIndex, setStageIndex]: [number, (input: number) => void] = useState(0);
-  const [finishedFiles, setFinishedFiles]: [string[], (input: string[]) => void] = useState<string[]>([]);
+  const [_, setFinishedFiles]: [string[], (input: string[]) => void] = useState<string[]>([]);
 
   const carousel = useRef<Carousel>(null);
 
